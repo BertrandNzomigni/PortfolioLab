@@ -1,17 +1,20 @@
-import SignOut from "../components/sign-out";
 import { auth } from "@/auth";
-import { redirect } from "next/navigation";
+import userExist from "@/app/actions/userexist";
+import createUser from "@/app/actions/createuser";
+
 
 export default async function Home() {
   const session = await auth();
+  
+  userExist(session.user.email).then( (result) => {
+    if (!result){
+      createUser();
+    }
+  });
 
-  if (!session?.user) {
-    redirect("/")
-  }
   return (
     <main>
-      <h1>Welcome {session.user.name} to the main menu of Portfoliolab.</h1>
-      <SignOut />
+      <h1>Welcome {session.user.name} to Portfoliolab.</h1>
     </main>
   );
 }

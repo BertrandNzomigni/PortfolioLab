@@ -214,7 +214,7 @@ function mapStockPrices(
 /**
  * Récupère une entreprise et insère ses prix.
  */
-async function processCompany(
+export async function processCompany(
     company: {
         id: number;
         symbol: string;
@@ -368,20 +368,24 @@ async function main() {
     }
 }
 
-try {
 
-    await main();
+async function run(){
+    try {
 
-} catch (error) {
+        await main();
 
-    console.error(
-        "\nFatal error:",
-        error
-    );
+    } catch (error) {
 
-    process.exitCode = 1;
+        console.error(
+            "\nFatal error:",
+            error
+        );
 
-} finally {
+        process.exitCode = 1;
 
-    await prisma.$disconnect();
+    } finally {
+
+        await prisma.$disconnect();
+    }
 }
+
