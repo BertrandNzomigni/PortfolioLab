@@ -11,6 +11,7 @@ import ownershipQuantity from "@/app/actions/ownership";
 import userId from "@/app/actions/userId";
 import { auth } from "@/auth";
 import GoBackButton from "@/app/components/goBackButton";
+import { companyLastestPrice } from "@/app/actions/companyPrice";
 
 export default async function Page({ params }: PageProps) {
   const { companyId } = await  params;
@@ -26,7 +27,7 @@ export default async function Page({ params }: PageProps) {
   }
 
   const money = (await currentUserMoney());
-  const stock_price = company.stockPrices[0]?.closePrice;
+  const stock_price = await companyLastestPrice(parseInt(companyId));
 
   return(<div>
     <h1>Transaction page of {company.name}</h1>

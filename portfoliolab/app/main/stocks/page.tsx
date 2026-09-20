@@ -12,7 +12,7 @@ export default async function Home({searchParams}: {searchParams: {search1?: str
             <SearchBar placeholder={"Search company..."} id={1}/>
             <SliceButtons id={1}/>
             <br/>
-            <table>
+            <table style={{borderCollapse: 'separate',borderSpacing: '10px 0'}}>
                 <thead>
                     <tr>
                         <th>Company</th><th>Price</th><th>Transactions</th><th>Details</th>

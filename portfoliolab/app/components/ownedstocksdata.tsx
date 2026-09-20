@@ -1,6 +1,6 @@
 import { prisma } from "../../lib/prisma";
 import CompanyTransactionButton from "./company_transaction_button";
-import CompanyDetailsButton from "./company_derails_button";
+import CompanyDetailsButton from "./company_details_button";
 import { Decimal } from "@prisma/client/runtime/client";
 
 

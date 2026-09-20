@@ -1,7 +1,7 @@
 import { prisma } from "@/lib/prisma";
 import userId from "./userId";
 import { auth } from "@/auth";
-import companyLastestPrice from "./companyPrice";
+import { companyLastestPrice } from "./companyPrice";
 import { Decimal } from "@prisma/client/runtime/client";
 
 export default async function totalPortfolioValue(){

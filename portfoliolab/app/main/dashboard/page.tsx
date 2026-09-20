@@ -14,7 +14,7 @@ export default async function Home({searchParams}: {searchParams: {search1?: str
       <p> Owned stocks </p>
       <SearchBar placeholder="Search a owned stock..." id={1}/>
       <SliceButtons id={1}></SliceButtons>
-      <table>
+      <table style={{borderCollapse: 'separate',borderSpacing: '10px 0'}}>
         <thead>
           <tr>
             <th>Company</th><th>Quantity</th><th>Latest price</th><th>Total value</th>

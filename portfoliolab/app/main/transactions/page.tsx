@@ -9,7 +9,7 @@ export default async function Home({searchParams}: {searchParams: {search1?: str
       <h1>Transactions</h1>
       <SearchBar placeholder="Search a transaction..." id={1}/>
       <SliceButtons id={1}></SliceButtons>
-      <table>
+      <table style={{borderCollapse: 'separate',borderSpacing: '10px 0'}}>
         <thead>
           <tr>
             <th>Company</th><th>Type</th><th>Quantity</th><th>Price</th><th>Total value</th><th>Date</th>
