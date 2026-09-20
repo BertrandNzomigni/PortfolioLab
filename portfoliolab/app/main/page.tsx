@@ -14,7 +14,7 @@ export default async function Home() {
 
   return (
     <main>
-      <h1>Welcome {session.user.name} to Portfoliolab.</h1>
+      <h1>Welcome {session.user.name} to PortfolioLab.</h1>
     </main>
   );
 }

@@ -30,7 +30,7 @@ export default function Navbar() {
                     href="/main"
                     className="mr-10 text-xl font-bold tracking-tight text-gray-900"
                 >
-                    Portfoliolab
+                    PortfolioLab
                 </Link>
 
                 {/* Navigation */}
